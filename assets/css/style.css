@@ -1,0 +1,122 @@
+/* This section describes the rules that govern the entire site unless overruled */
+*{
+    font-family: serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* This controls the background image of my webpage */
+body {
+    background-image: url("../images/black-background.jpg")
+}
+
+/* controls behavior of anchor tags */
+a { 
+    display: block; /*allows us to specify padding, height, width and margin */
+    padding: 20px; /*provides padding between anchor element */
+}
+
+/* controls behavior of text within paragraphs */
+p {
+    color:#ffcc00;
+    display: inline;
+}
+
+/* Controls the behavior of H2 tags  */
+h2 {
+    color: whitesmoke;
+}
+
+
+.header { 
+    background-color: #804000;
+    color: #ffcc00;
+    display: flex;
+    f
+}
+
+.header h1 {
+    font-size: 48px;
+    display: inline-block; /*Makes the h1 content stay inline with the other header stuff*/
+    /* The padding above and below the element is for styling */
+    padding-bottom: 15px;
+    
+}
+
+/* This tells the logo to be on the left side of the screen, and controls the height */
+.header .logo {
+    float: left;
+    max-height: 85px;
+    }
+/* controls the big image at the top of the page */
+
+
+.header nav {
+    /* Font size selector for all elements in nav bar */
+    font-size: 20px;
+}
+
+.header ul {
+    list-style-type: none; /*removes bullet points or other decorations */
+    
+}
+
+.header ul li {
+    display: inline-block;
+    margin-left: 100px;
+    padding-top: 15px;
+    align-content: flex-end;
+    flex-wrap:wrap;
+}
+
+/* Controls the behavior of the big image towards the top of the screen */
+.mainImg {
+    width: 100%;
+    max-height: 400px;
+}
+
+.profile {
+    float: left;
+    display: inline-block;
+    max-height:  150px;
+    
+}
+
+.container {
+    position: relative;
+    max-width:fit-content; /* Maximum width */
+    margin: 0 auto; /* Center it */
+
+}
+      
+.container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */    
+}
+
+.container .content p {
+    color: #f1f1f1
+}
+
+.big-project {
+    max-width: 800px;
+}
+
+.lesser-project {
+    max-width: 400px;
+    display: inline-block;
+    min-height: 500px;
+}
+
+.footer {
+    text-align: center;
+    color: #ffcc00;
+    margin-top: 20px;
+}
