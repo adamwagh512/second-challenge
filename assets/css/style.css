@@ -1,7 +1,7 @@
 /* This section describes the rules that govern the entire site unless overruled */
 *{
     font-family: serif;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -10,12 +10,6 @@
 /* This controls the background image of my webpage */
 body {
     background-image: url("../images/black-background.jpg")
-}
-
-/* controls behavior of anchor tags */
-a { 
-    display: block; /*allows us to specify padding, height, width and margin */
-    padding: 20px; /*provides padding between anchor element */
 }
 
 /* controls behavior of text within paragraphs */
@@ -29,20 +23,21 @@ h2 {
     color: whitesmoke;
 }
 
-
+/* controls the entire header class */
 .header { 
     background-color: #804000;
     color: #ffcc00;
     display: flex;
-    f
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
 }
 
+/* Controls the behavior of the big letters at the top of the page */
 .header h1 {
     font-size: 48px;
     display: inline-block; /*Makes the h1 content stay inline with the other header stuff*/
-    /* The padding above and below the element is for styling */
-    padding-bottom: 15px;
-    
 }
 
 /* This tells the logo to be on the left side of the screen, and controls the height */
@@ -50,25 +45,29 @@ h2 {
     float: left;
     max-height: 85px;
     }
-/* controls the big image at the top of the page */
+
+/* controls behavior of anchor tags that are children of the header */
+.header >a { 
+    display: block; 
+    padding: 20px; 
+}
 
 
+/* Controls the nav class within the header class */
 .header nav {
-    /* Font size selector for all elements in nav bar */
-    font-size: 20px;
+    font-size: 20px; /* Font size selector for all elements in nav bar */
 }
 
 .header ul {
     list-style-type: none; /*removes bullet points or other decorations */
+    display: flex;
     
 }
 
 .header ul li {
     display: inline-block;
     margin-left: 100px;
-    padding-top: 15px;
-    align-content: flex-end;
-    flex-wrap:wrap;
+    padding-top: 15px;  
 }
 
 /* Controls the behavior of the big image towards the top of the screen */
@@ -105,7 +104,7 @@ h2 {
     color: #f1f1f1
 }
 
-.big-project {
+.container .content .big-project {
     max-width: 800px;
 }
 
@@ -113,10 +112,41 @@ h2 {
     max-width: 400px;
     display: inline-block;
     min-height: 500px;
+    min-width: 600px;
 }
 
 .footer {
     text-align: center;
     color: #ffcc00;
     margin-top: 20px;
+}
+
+.contact-me {
+    background-color: #804000;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a:visited {
+    color: #ffcc00
+}
+
+a:hover {
+    color: lightgoldenrodyellow;
+}
+
+.lesser-project:hover {
+    filter: blur(5px);
+}
+
+.big-project:hover{
+    filter: grayscale(100%);
+}
+
+@media screen and (max-width:600px) {
+span {
+    display: none;
+    }
 }
